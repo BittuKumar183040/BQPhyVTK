@@ -8,8 +8,7 @@ const calculateDistance = (point1, point2) => {
     );
   };
   
-  const getColorFromDistance = (distance, maxDistance) => {
-    const minDistance = 0;
+  const getColorFromDistance = (distance, minDistance, maxDistance) => {
     const value = (distance - minDistance) / (maxDistance - minDistance);
     let h, s, l;
     if (value < 0.5) {
@@ -30,9 +29,9 @@ const calculateDistance = (point1, point2) => {
     return new Color(`hsl(${h}, ${s}%, ${l}%)`);
   };
   
-export const HeatMap = ({scale, maxDistance, position, referencePosition }) => {
+export const HeatMap = ({scale, minDistance, maxDistance, position, referencePosition }) => {
     const distance = calculateDistance(position, referencePosition);
-    const color = getColorFromDistance(distance, maxDistance);
+    const color = getColorFromDistance(distance, minDistance, maxDistance);
   
     return (
         <mesh position={position} scale={scale}>
