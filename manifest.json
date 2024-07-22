@@ -1,0 +1,21 @@
+{
+  "short_name": "vtk-Renderer",
+  "name": "VTK Renderer for Unstructured Data",
+  "description": "This is a standalone application which is used to render BQPhy simulation's result file.",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 48x48",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logo64.png",
+      "type": "image/png",
+      "sizes": "64x64"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
